@@ -131,4 +131,39 @@ public class LinkList {
 		}
 	}
 
+	/*
+	 * Ability to delete given element
+	 */
+	public void deleteElement(Object data) {
+		if (head == null)
+			System.out.println("Linked list is empty so cant delete");
+		else if (head.data == data) {
+			head = null;
+		} else {
+			Node temp = head;
+			while (temp.next.data != data) {
+				temp = temp.next;
+			}
+			temp.next = temp.next.next;
+		}
+	}
+
+	/*
+	 * calculating size of linked list
+	 */
+	public int getSize() {
+		int count = 0;
+		if (head == null)
+			return count;
+		else {
+			Node temp = head;
+			while (temp != null) {
+				count++;
+				temp = temp.next;
+			}
+			System.out.println("Size is " + count);
+			return count;
+		}
+	}
+
 }
