@@ -18,6 +18,11 @@ public class LinkList {
 	}
 
 	/*
+	 * Ability to create Linked List by adding 30 and 56 to 70 - Node with data 70
+	 * is First Created - Next 30 is added to 70 - Finally 56 is added to 30 -
+	 * LinkedList Sequence: 56->30->70
+	 */
+	/*
 	 * add first method
 	 */
 	public void addFirst(Object data) {
@@ -46,6 +51,11 @@ public class LinkList {
 		}
 	}
 
+	/*
+	 * Ability to create Linked List by appending 30 and 70 to 56 Node with data 56
+	 * is First Created - Next Append 30 to 56 Finally Append 70 to 30 LinkedList
+	 * Sequence: 56->30->70
+	 */
 	/*
 	 * Add last method
 	 */
@@ -84,6 +94,10 @@ public class LinkList {
 	}
 
 	/*
+	 * Ability to delete the first element in the LinkedList of sequence 56->30->70
+	 * - Write pop method Note there is new head Final Sequence: 30->70
+	 */
+	/*
 	 * delete first method
 	 */
 	public void deleteFirst() {
@@ -93,6 +107,10 @@ public class LinkList {
 			head = head.next;
 	}
 
+	/*
+	 * Ability to delete the last element in the LinkedList of sequence 56->30->70 -
+	 * Write popLast method Note there is new tail Final Sequence: 56->30
+	 */
 	/*
 	 * delete last method
 	 */
@@ -108,6 +126,9 @@ public class LinkList {
 			temp.next = null;
 		}
 	}
+	/*
+	 * Ability to search LinkedList to find Node with value 30
+	 */
 
 	/*
 	 * search element
@@ -131,6 +152,10 @@ public class LinkList {
 		}
 	}
 
+	/*
+	 * Ability to delete 40 from the Linked List sequence of 56->30->40->70 and show
+	 * the size of LinkedList is 3
+	 */
 	/*
 	 * Ability to delete given element
 	 */
