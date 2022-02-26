@@ -13,11 +13,6 @@ public class LinkList {
 	}
 
 	/*
-	 * Ability to create Linked List by adding 30 and 56 to 70 - Node with data 70
-	 * is First Created - Next 30 is added to 70 - Finally 56 is added to 30 -
-	 * LinkedList Sequence: 56->30->70
-	 */
-	/*
 	 * add first method
 	 */
 	public void addFirst(Object data) {
@@ -46,13 +41,22 @@ public class LinkList {
 		}
 	}
 
-	public static void main(String[] args) {
-		System.out.println("Welcome To Linked list !!!!");
-		LinkList linkedList = new LinkList();
-		linkedList.addFirst(70);
-		linkedList.addFirst(30);
-		linkedList.addFirst(56);
-		linkedList.display();
-
+	/*
+	 * Add last method
+	 */
+	public void addLast(Object data) {
+		Node newNode = new Node(data);
+		if (head == null)
+			head = newNode;
+		else if (head.next == null)
+			head.next = newNode;
+		else {
+			Node temp = head;
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+			temp.next = newNode;
+		}
 	}
+
 }
