@@ -3,6 +3,7 @@ package com.java.Generics;
 import java.util.Scanner;
 
 public class LinkList {
+
 	Scanner scanner = new Scanner(System.in);
 
 	Node head;
@@ -83,7 +84,7 @@ public class LinkList {
 	}
 
 	/*
-	 * delete last method
+	 * delete first method
 	 */
 	public void deleteFirst() {
 		if (head == null)
@@ -92,4 +93,19 @@ public class LinkList {
 			head = head.next;
 	}
 
+	/*
+	 * delete last method
+	 */
+	public void deleteLast() {
+		if (head == null)
+			System.out.println("No elements present to delete");
+		else if (head.next == null)
+			head = null;
+		else {
+			Node temp = head;// creating temp object assigining head to it
+			while (temp.next.next != null)
+				temp = temp.next;
+			temp.next = null;
+		}
+	}
 }
