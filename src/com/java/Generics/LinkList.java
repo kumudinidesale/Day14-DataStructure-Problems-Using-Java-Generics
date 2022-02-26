@@ -108,4 +108,27 @@ public class LinkList {
 			temp.next = null;
 		}
 	}
+
+	/*
+	 * search element
+	 */
+	public void searchElement(Object data) {
+		byte flag = 0;
+		if (head == null)
+			System.out.println("No elements present to search");
+		else {
+			Node temp = head;
+			while (temp != null) {
+				if (data.equals(temp.data)) {
+					flag = 1;
+					System.out.println(data + " is present in linked list");
+					break;
+				}
+				temp = temp.next;
+			}
+			if (flag == 0)
+				System.out.println(data + " is absent in linked list");
+		}
+	}
+
 }
